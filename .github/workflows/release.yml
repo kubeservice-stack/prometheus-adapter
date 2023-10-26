@@ -3,6 +3,7 @@ name: release package
 on:
   push:
     branches: [ 'hpa-adapter' ]
+  workflow_dispatch: {}
   pull_request:
     branches: [ "hpa-adapter" ]
 
