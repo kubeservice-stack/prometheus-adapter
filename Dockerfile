@@ -9,8 +9,7 @@ COPY pkg pkg
 COPY cmd cmd
 COPY Makefile Makefile
 
-ARG ARCH
-RUN make prometheus-adapter
+RUN CGO_ENABLED=0 go build sigs.k8s.io/prometheus-adapter/cmd/adapter
 
 FROM alpine:latest
 
